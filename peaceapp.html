@@ -1,0 +1,55 @@
+<head>
+  <title>Friends without Borders</title>
+</head>
+
+<body>
+  {{> header}}
+  {{> body}}
+</body>
+
+<template name="header">
+  <div class="navbar navbar-default" role="navigation">
+      <div class="navbar-header">
+          <a class="navbar-brand" href="#">Friends without Borders - Beta</a>
+      </div>
+      <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+              {{> loginButtons }}
+          </ul>
+      </div>
+  </div>
+</template>
+
+<template name="body">
+  <div class="container theme-showcase" role="main">
+    <div class="jumbotron">
+      <h2>{{friends}} Friends without Borders</h2>
+      <h2>{{shares}} Shares</h2>
+      <div class="btn btn-primary btn-lg" id="find" role="button">Find a Friend without border</div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="row" id="me">
+          <div class="col-md-6">
+            <img src={{me.image}}>
+          </div>
+          <div class="col-md-6">
+            <h4>{{me.name}}</h4>
+            <h5>{{me.gender}}</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="row" id="other">
+          <div class="col-md-6">
+            <img src="" id="other-image">
+          </div>
+          <div class="col-md-6">
+            <h4 id="other-name"></h4>
+            <h5 id="other-gender"></h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
